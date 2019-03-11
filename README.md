@@ -1,5 +1,12 @@
 # Ising2D
-Using Metropolis Hasting algorithm to simulate a 2D Ising model in a square lattice
+Using Metropolis Hasting algorithm to simulate a 2D Ising model in a square lattice.
+
+In statistical mechanics, we would like to compute macroscopic quantities (e.g. heat capacity) from the Hamiltonian. Analytic calculation using pen and paper involves a computation of expectation value (i.e. mean value). Unfortunately, analytic / closed-form solution exists for some systems only. To deal with realistic, complex systems, one must seek for numerical solutions. <br>
+
+One of the simplest methods is to generate samples using **Monte Carlo** simulation. The trick here is to make use of Markov Chain, hence the name **Monte-Carlo Markov Chain (MCMC)** method, to generate the desired samples. The algorithm that we used here is known as **Metropolis Hasting algorithm**. 
+
+In this project, the Hamiltonian is a standard 2D Ising model in a finite square lattce with nearest neighbour coupling. Each spin takes a value of -1 or +1. Periodic boundary condition is used.
+
 
 # Getting Started
 
