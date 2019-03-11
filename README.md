@@ -76,6 +76,10 @@ All the results are appended to `result/data.txt`
 # Plot the results
 The python script in `result/plot_result.py` plots the physical quantities versus temperature.
 I have included some figures as a reference
+
+## Required modulues 
+NumPy
+Matplotlib
 ```
 $ cd result
 $ python3 result/plot_result.py
