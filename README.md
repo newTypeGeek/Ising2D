@@ -51,7 +51,7 @@ $ ./ising2D_simulation 50 1 2 2010000000 2000000000 10000 test.txt
    X_per_spin = 0.3451087200
    Time elapsed (in sec) = 63.1119290000
 ```
-The result is appended to test.txt.
+The result is appended to `test.txt`.
 
 * Column 1:  Temperature <br>
 * Column 2:  Nearest neighbour coupling <br>
@@ -77,7 +77,7 @@ All the results are appended to `result/data.txt`
 The python script in `result/plot_result.py` plots the physical quantities versus temperature.
 I have included some figures as a reference
 
-## Required modulues 
+## Required modules 
 * NumPy
 * Matplotlib
 ```
