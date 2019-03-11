@@ -78,8 +78,8 @@ The python script in `result/plot_result.py` plots the physical quantities versu
 I have included some figures as a reference
 
 ## Required modulues 
-NumPy
-Matplotlib
+* NumPy
+* Matplotlib
 ```
 $ cd result
 $ python3 result/plot_result.py
