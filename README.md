@@ -5,8 +5,7 @@ In statistical mechanics, we would like to compute macroscopic quantities (e.g. 
 
 One of the simplest methods is to generate samples using **Monte Carlo** simulation.
 The trick here is to make use of Markov Chain, hence the name **Monte-Carlo Markov Chain (MCMC)** method, to generate the desired samples.
-The key idea is to construct a transition probability of the Markov Chain is stationary and it would converge to the desired probability distribution (i.e. Boltzmann distribution in this case).
-The algorithm that we used here is known as **Metropolis Hasting algorithm**. 
+The key idea is to construct a transition probability for the Markov Chain such that it has a stationary distribution (our desired distribution -- Boltzmann distribution). The algorithm that we used here is known as **Metropolis Hasting algorithm**. 
 
 In this project, the Hamiltonian is a standard 2D Ising model in a finite square lattce with nearest neighbour coupling. Each spin takes a value of -1 or +1. Periodic boundary condition is used.
 
