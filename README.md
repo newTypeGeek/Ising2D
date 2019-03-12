@@ -20,7 +20,7 @@ You can also run the bash script<br>
 `$ chmod +x compile.sh`<br>
 `$ ./compile.sh`
 
-# How to Run
+# Simulate a single case
 User is required to input 7 arguments as shown below
 ```
 $ ./ising2D_simulation`
@@ -41,7 +41,7 @@ Require 7 user input arguments only
 7. File path to append result
 ```
 
-For example
+For example, you could try the following.<br>
 ```
 $ ./ising2D_simulation 50 1 2 2010000000 2000000000 10000 test.txt
    Square lattice length             L = 50
@@ -58,7 +58,7 @@ $ ./ising2D_simulation 50 1 2 2010000000 2000000000 10000 test.txt
    X_per_spin = 0.3451087200
    Time elapsed (in sec) = 63.1119290000
 ```
-The result is appended to `test.txt`.
+The result is then appended to `test.txt` as shown below.
 
 * Column 1:  Temperature <br>
 * Column 2:  Nearest neighbour coupling <br>
@@ -73,21 +73,17 @@ $ vim test.txt
 ~  
 ```
 
+# Simulate with different temperatures
 You can generate the results with different temperature using `run_all.sh`.<br>
+In this case, we loop over a temperature from 0.50 to 3.00 with an increment step of 0.01
 ```
 $ chmod +x run_all.sh
 $ ./run_all.sh
 ```
-All the results are appended to `result/data.txt`
+All the results are appended to `result/data.txt`.
+Plots are included in `result` directory for references.
+<img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Ene_vs_T.png" width="360">
+<img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Cap_vs_T.png" width="360">
+<img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Mag_vs_T.png" width="360">
+<img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Sus_vs_T.png" width="360">
 
-# Plot the results
-The python script in `result/plot_result.py` plots the physical quantities versus temperature.
-I have included some figures as a reference
-
-## Required modules 
-* NumPy
-* Matplotlib
-```
-$ cd result
-$ python3 result/plot_result.py
-```
