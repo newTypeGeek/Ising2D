@@ -3,7 +3,10 @@ Using Metropolis Hasting algorithm to simulate a 2D Ising model in a square latt
 
 In statistical mechanics, we would like to compute macroscopic quantities (e.g. heat capacity) from the Hamiltonian. Analytic calculation using pen and paper involves a computation of expectation value (i.e. mean value). Unfortunately, analytic / closed-form solution exists for some systems only. To deal with realistic, complex systems, one must seek for numerical solutions. <br>
 
-One of the simplest methods is to generate samples using **Monte Carlo** simulation. The trick here is to make use of Markov Chain, hence the name **Monte-Carlo Markov Chain (MCMC)** method, to generate the desired samples. The algorithm that we used here is known as **Metropolis Hasting algorithm**. 
+One of the simplest methods is to generate samples using **Monte Carlo** simulation.
+The trick here is to make use of Markov Chain, hence the name **Monte-Carlo Markov Chain (MCMC)** method, to generate the desired samples.
+The key idea is to construct a transition probability of the Markov Chain is stationary and it would converge to the desired probability distribution (i.e. Boltzmann distribution in this case).
+The algorithm that we used here is known as **Metropolis Hasting algorithm**. 
 
 In this project, the Hamiltonian is a standard 2D Ising model in a finite square lattce with nearest neighbour coupling. Each spin takes a value of -1 or +1. Periodic boundary condition is used.
 
@@ -80,10 +83,19 @@ In this case, we loop over a temperature from 0.50 to 3.00 with an increment ste
 $ chmod +x run_all.sh
 $ ./run_all.sh
 ```
-All the results are appended to `result/data.txt`.
-Plots are included in `result` directory for references.
-<img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Ene_vs_T.png" width="360">
-<img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Cap_vs_T.png" width="360">
-<img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Mag_vs_T.png" width="360">
-<img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Sus_vs_T.png" width="360">
+All the results are appended to `result/data.txt`. <br>
+Plots are included in `result` directory and they are shown below. <br>
+The take home message for this exercise is that, near critical temperature (red dashed line), the result is bad.
+When the system is near critical point, the correlation between different samples are very large. Note that the sampling interval in this `run_all.sh` is fixed for all temperature, and we do not consider **Importance of Sampling** in details.
+<img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Ene_vs_T.png"
+alt="Energy per spin versus temperature" width="360">
+
+<img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Cap_vs_T.png" 
+alt="Heat capacity per spin versus temperature" width="360">
+
+<img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Mag_vs_T.png"
+alt="Absolute magnetization per spin versus temperature" width="360">
+
+<img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Sus_vs_T.png"
+alt="Magnetic susceptibility per spin versus temperature" width="360">
 
