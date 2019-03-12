@@ -87,15 +87,13 @@ All the results are appended to `result/data.txt`. <br>
 Plots are included in `result` directory and they are shown below. <br>
 The take home message for this exercise is that, near critical temperature (red dashed line), the result is bad.
 When the system is near critical point, the correlation between different samples are very large. Note that the sampling interval in this `run_all.sh` is fixed for all temperature, and we do not consider **Importance of Sampling** in details.
+
 <img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Ene_vs_T.png"
 alt="Energy per spin versus temperature" width="360">
-
 <img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Cap_vs_T.png" 
 alt="Heat capacity per spin versus temperature" width="360">
-
 <img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Mag_vs_T.png"
 alt="Absolute magnetization per spin versus temperature" width="360">
-
 <img src="https://github.com/newTypeGeek/Ising2D/blob/master/result/Sus_vs_T.png"
 alt="Magnetic susceptibility per spin versus temperature" width="360">
 
